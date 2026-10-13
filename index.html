@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#080b1d">
+  <title>الأبطال الأسطورية | Legendary Heroes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">✦</span><div><strong>LEGENDARY HEROES</strong><small>الأبطال الأسطورية</small></div></div>
+      <div class="top-actions">
+        <button id="soundBtn" class="icon-btn" aria-label="الصوت">🔊</button>
+        <button id="pauseBtn" class="icon-btn" aria-label="إيقاف مؤقت" disabled>Ⅱ</button>
+      </div>
+    </header>
+
+    <section id="menuScreen" class="screen menu-screen">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse-dot"></span> OFFLINE ACTION GAME</div>
+        <h1>انهض يا <span>بطل</span></h1>
+        <p>قاتل الروبوتات، اجمع الطاقة، وافتح الطريق إلى النصر.</p>
+        <div class="feature-pills"><span>⚡ أكشن</span><span>◈ مراحل</span><span>◎ بدون إنترنت</span></div>
+        <button id="startBtn" class="primary-btn">ابدأ المغامرة <span>←</span></button>
+        <button id="levelsBtn" class="secondary-btn">اختيار المرحلة</button>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="hero-glow"></div>
+        <div class="hero-figure"><div class="hero-head"></div><div class="hero-body"></div><div class="hero-arm"></div><div class="hero-blade"></div><div class="hero-leg left"></div><div class="hero-leg right"></div></div>
+        <div class="floating-chip chip-one">LVL 01</div><div class="floating-chip chip-two">ENERGY +</div>
+      </div>
+      <div class="menu-footer"><span>نسخة تجريبية قابلة للعب</span><span>تم التطوير بواسطة <b>معاذ محمد عبد النبي</b></span></div>
+    </section>
+
+    <section id="levelsScreen" class="screen levels-screen hidden">
+      <div class="screen-heading"><div><span class="eyebrow">MISSION SELECT</span><h2>اختر مهمتك</h2></div><button id="backBtn" class="secondary-btn compact">رجوع</button></div>
+      <p class="muted">افتح المراحل بالتقدم في اللعبة.</p>
+      <div id="levelGrid" class="level-grid"></div>
+    </section>
+
+    <section id="gameScreen" class="screen game-screen hidden">
+      <div class="hud">
+        <div class="hud-card"><small>المرحلة</small><strong id="hudLevel">01</strong></div>
+        <div class="hud-card"><small>الطاقة</small><strong id="hudHealth">♥ ♥ ♥</strong></div>
+        <div class="hud-card"><small>العملات</small><strong>◆ <span id="hudCoins">0</span></strong></div>
+        <div class="hud-card"><small>النقاط</small><strong id="hudScore">0</strong></div>
+      </div>
+      <div class="canvas-wrap">
+        <canvas id="gameCanvas" width="960" height="540" aria-label="ساحة اللعبة"></canvas>
+        <div id="toast" class="toast hidden"></div>
+        <div id="overlay" class="overlay hidden">
+          <div class="overlay-card"><div id="overlayIcon" class="overlay-icon">✦</div><h2 id="overlayTitle">استعد!</h2><p id="overlayText">مهمتك بدأت.</p><div class="overlay-actions"><button id="overlayMainBtn" class="primary-btn">تابع</button><button id="overlayMenuBtn" class="secondary-btn">القائمة الرئيسية</button></div></div>
+        </div>
+      </div>
+      <div class="game-bottom">
+        <div class="controls movement-controls">
+          <button id="leftBtn" class="control-btn" aria-label="تحرك يسار">◀</button>
+          <button id="rightBtn" class="control-btn" aria-label="تحرك يمين">▶</button>
+        </div>
+        <div class="control-hint">تحرّك • اقفز • أطلق النار</div>
+        <div class="controls action-controls">
+          <button id="shootBtn" class="control-btn shoot-btn" aria-label="إطلاق النار">✦<small>نار</small></button>
+          <button id="jumpBtn" class="control-btn jump-btn" aria-label="اقفز">⬆<small>قفز</small></button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="global-footer">LEGENDARY HEROES <span>•</span> لعبة مستقلة تعمل محليًا</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
